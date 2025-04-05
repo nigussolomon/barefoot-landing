@@ -102,7 +102,7 @@ export default function About() {
                 padding={0}
               >
                 <Image
-                  src="https://barefootethiopia.org/uploads/about_04.jpg"
+                  src="https://barefootethiopia.org/uploads/blog-02.jpg"
                   width="auto"
                 />
               </Card>
