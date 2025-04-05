@@ -224,7 +224,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
             justify="space-between"
             rightSection={">"}
             key={index}
-            onClick={() => (window.location.pathname = item.path)}
+            onClick={() => {handleNavigation(item.path); toggle()}}
           >
             {item.name}
           </Button>
