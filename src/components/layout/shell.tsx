@@ -70,24 +70,12 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
       name: "News",
       path: "/news",
       active: path === "/news",
-      sub: [
-        {
-          name: "Athlete Spotlights",
-          path: "/news/#athlete-spotlights",
-          active: path === "/news/#athlete-spotlights",
-        },
-        {
-          name: "Press Releases",
-          path: "/news/#press-releases",
-          active: path === "/news/#press-releases",
-        },
-      ],
     },
 
     {
       name: "Our Team",
-      path: "/our-team",
-      active: path === "/our-team",
+      path: "/teams",
+      active: path === "/teams",
     },
 
     {
@@ -108,7 +96,6 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
       ],
     },
   ];
-  console.log(path.split("/")[1]);
 
   return (
     <AppShell

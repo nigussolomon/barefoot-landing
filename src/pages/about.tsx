@@ -21,13 +21,14 @@ import {
   PhoneCallIcon,
   TrophyIcon,
 } from "lucide-react";
+import { featureStyles } from "../components/ui/featureStyles";
 
 export default function About() {
   return (
     <LayoutShell>
       <Container size="xl">
         <Box id="who-we-are">
-          <SimpleGrid spacing="xl" cols={{ base: 1, md: 2 }}>
+          <SimpleGrid h={600} spacing="xl" cols={{ base: 1, md: 2 }}>
             <Flex
               direction="column"
               gap={10}
@@ -87,7 +88,7 @@ export default function About() {
           </SimpleGrid>
         </Box>
         <Box id="legality">
-          <SimpleGrid spacing="xl" cols={{ base: 1, md: 2 }}>
+          <SimpleGrid h={600} spacing="xl" cols={{ base: 1, md: 2 }}>
             <Card py="xl" px={0}>
               <Card
                 style={{
@@ -107,21 +108,35 @@ export default function About() {
                 />
               </Card>
             </Card>
-            <Flex direction="column" w="100%" align="flex-start" justify="center">
+            <Flex
+              direction="column"
+              w="100%"
+              align="flex-start"
+              justify="center"
+            >
               <Title order={2} ta="left" mt="sm">
                 Legality and Establishment
               </Title>
-              <Accordion variant="contained" w="100%">
+              <Text
+                ta="left"
+                mb="xl"
+                c="dimmed"
+              >
+                We are a legally established entity under Ethiopian law,
+                committed to transparency, compliance, and ethical standards in
+                supporting Ethiopian athletes.
+              </Text>
+              <Accordion mt="xl" variant="contained" w="100%">
                 {[
                   {
                     title: "Legal Foundation",
                     content:
-                      "We operate under Civil Society Organizations Proclamation No. 1113/2011, which regulates civil society organizations in Ethiopia. This provides us with a clear legal framework for transparency and accountability.",
+                      "We operate in accordance with the Civil Society Organizations Proclamation No. 1113/2011, which governs the establishment, registration, regulation, and oversight of civil society organizations (CSOs) in Ethiopia. This proclamation provides a comprehensive legal framework that ensures our organization maintains high standards of transparency, accountability, and ethical conduct in all areas of our work.",
                   },
                   {
                     title: "Government Support",
                     content:
-                      "Our initiatives are supported by the Ethiopian Athletics Federation and the Ethiopian Ministry of Foreign Affairs, giving us credibility and a strong foundation for national and international collaboration.",
+                      "Our initiatives are proudly supported by both the Ethiopian Athletics Federation and the Ethiopian Ministry of Foreign Affairs. These partnerships not only enhance our credibility but also provide a solid foundation for fostering meaningful collaboration at both national and international levels.",
                   },
                   {
                     title: "Our Mission",
@@ -147,10 +162,22 @@ export default function About() {
             </Flex>
           </SimpleGrid>
         </Box>
-        <Box my="xl" id="objectives">
+        <Box h={550} my="xl" id="objectives">
           <Title order={2} ta="center" mt="xl" mb="lg">
             Our Objectives
           </Title>
+          <Text
+            ta="center"
+            mb="xl"
+            c="dimmed"
+            style={featureStyles.description}
+          >
+            We are dedicated to promoting the achievements of Ethiopian
+            athletes, celebrating their victories, and providing comprehensive
+            support. Through international promotion, community-building events,
+            and global partnerships, we aim to enhance their success and elevate
+            Ethiopia's presence in the world of sports.
+          </Text>
           <SimpleGrid spacing="xl" cols={{ base: 1, md: 3 }}>
             {[
               {
@@ -190,7 +217,7 @@ export default function About() {
                   "Build partnerships with global athletic organizations to further develop Ethiopian athletics.",
               },
             ].map((item, index) => (
-              <Card withBorder shadow="xs">
+              <Card p="md" withBorder shadow="xs">
                 <Flex gap={15} align="flex-start">
                   <Box>{item.icon}</Box>
                   <Flex key={index} direction="column" gap="sm">

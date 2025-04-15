@@ -27,7 +27,15 @@ export default function Gallery() {
   };
   return (
     <LayoutShell>
-      <Modal opened={opened} onClose={toggle}></Modal>
+      <Modal withCloseButton={false} size="xl" opened={opened} onClose={toggle}>
+        <Image
+          radius="sm"
+          w="100%"
+          h="85vh"
+          fit="contain"
+          src="https://barefootethiopia.org/uploads/blog-01.jpg"
+        />
+      </Modal>
       <Container size="xl" py="xs">
         <Title mt="md" ta="center">
           Explore our vast gallery...
@@ -69,7 +77,7 @@ export default function Gallery() {
                     OLYMPICS
                   </Text>
                 ),
-              }
+              },
             ]}
           />
         </Flex>
@@ -86,7 +94,7 @@ export default function Gallery() {
                 opacity={hoverState == index ? 0.7 : 0}
               >
                 <Center h="100%">
-                  <ActionIcon variant="default" size="xl">
+                  <ActionIcon onClick={toggle} variant="default" size="xl">
                     <GalleryVertical size={20} />
                   </ActionIcon>
                 </Center>
