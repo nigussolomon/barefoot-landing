@@ -8,8 +8,10 @@ import {
   Title,
 } from "@mantine/core";
 import { heroStyles } from "./heroStyles";
+import { useNavigate } from "react-router-dom";
 
 export function Hero() {
+  const navigate = useNavigate();
   return (
     <Box style={heroStyles.wrapper}>
       <Overlay color="#000" opacity={1} zIndex={1} />
@@ -20,17 +22,27 @@ export function Hero() {
 
         <Container size={640}>
           <Text size="lg" style={heroStyles.description}>
-            At BAREFOOT-ETHIOPIA, we celebrate and support Ethiopia’s rich
-            heritage in athletics, honoring our historic victories and legendary
-            athletes.
+            Join Us in Promoting and Strengthening Ethiopian Athletics.
           </Text>
         </Container>
 
         <Flex gap="sm" style={heroStyles.controls}>
-          <Button color="primary" size="xs">
+          <Button
+            radius="md"
+            onClick={() => navigate("/about")}
+            color="primary"
+            size="sm"
+          >
             About Us
           </Button>
-          <Button variant="white" size="xs">Contact Us</Button>
+          <Button
+            onClick={() => navigate("/membership")}
+            radius="md"
+            variant="white"
+            size="sm"
+          >
+            Membership
+          </Button>
         </Flex>
       </Box>
     </Box>

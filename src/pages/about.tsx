@@ -7,18 +7,15 @@ import {
   Text,
   Image,
   Card,
-  Button,
   Accordion,
 } from "@mantine/core";
 import { LayoutShell } from "../components/layout/shell";
 import {
   DumbbellIcon,
-  GalleryVerticalEnd,
   GiftIcon,
   Globe2Icon,
   LifeBuoyIcon,
   MegaphoneIcon,
-  PhoneCallIcon,
   TrophyIcon,
 } from "lucide-react";
 import { featureStyles } from "../components/ui/featureStyles";
@@ -47,24 +44,12 @@ export default function About() {
                 as a non-profit organization under Civil Society Organizations
                 Proclamation No. 1113/2011, which regulates civil society
                 organizations in Ethiopia. Supported by the Ethiopian Athletics
-                Federation and the Ethiopian Ministry of Foreign Affairs, we are
-                committed to promoting and developing Ethiopian athletics both
-                locally and internationally. Based in Addis Ababa, we envision
-                expanding our operations regionally and globally to bolster
-                Ethiopia’s legacy in athletics.
+                Federation and the Ethiopian Ministry of Sport and Culture, we
+                are committed to promoting and developing Ethiopian athletics
+                both locally and internationally. Based in Addis Ababa, we
+                envision expanding our operations regionally and globally to
+                bolster Ethiopia’s legacy in athletics.
               </Text>
-              <Flex mt="md" gap="xs">
-                <Button size="xs" rightSection={<PhoneCallIcon size={12} />}>
-                  Contact Us
-                </Button>
-                <Button
-                  size="xs"
-                  rightSection={<GalleryVerticalEnd size={12} />}
-                  variant="outline"
-                >
-                  Gallery
-                </Button>
-              </Flex>
             </Flex>
             <Card py="xl" px={0}>
               <Card
@@ -117,11 +102,7 @@ export default function About() {
               <Title order={2} ta="left" mt="sm">
                 Legality and Establishment
               </Title>
-              <Text
-                ta="left"
-                mb="xl"
-                c="dimmed"
-              >
+              <Text ta="left" mb="xl" c="dimmed">
                 We are a legally established entity under Ethiopian law,
                 committed to transparency, compliance, and ethical standards in
                 supporting Ethiopian athletes.
@@ -152,9 +133,7 @@ export default function About() {
                   <Accordion.Item value={item.title}>
                     <Accordion.Control>{item.title}</Accordion.Control>
                     <Accordion.Panel>
-                      <Text size="xs" c="dimmed">
-                        {item.content}
-                      </Text>
+                      <Text size="sm">{item.content}</Text>
                     </Accordion.Panel>
                   </Accordion.Item>
                 ))}
@@ -222,7 +201,7 @@ export default function About() {
                   <Box>{item.icon}</Box>
                   <Flex key={index} direction="column" gap="sm">
                     <Title order={5}>{item.name}</Title>
-                    <Text size="xs" mt={-10} c="dimmed">
+                    <Text size="sm" mt={-10} c="dimmed">
                       {item.description}
                     </Text>
                   </Flex>

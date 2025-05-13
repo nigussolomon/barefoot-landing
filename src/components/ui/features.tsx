@@ -9,13 +9,19 @@ import {
   Anchor,
 } from "@mantine/core";
 import { featureStyles } from "./featureStyles";
-import { TelescopeIcon, CrosshairIcon, GemIcon, ArrowDown, ArrowUp } from "lucide-react";
+import {
+  TelescopeIcon,
+  CrosshairIcon,
+  GemIcon,
+  ArrowDown,
+  ArrowUp,
+} from "lucide-react";
 
 const mockdata = [
   {
     title: "Vision",
     description:
-      "Our mission is to celebrate and preserve Ethiopia’s proud athletic heritage, from the historic Battle of Adwa victory to the iconic barefoot marathon triumphs of Abebe Bikila. We are dedicated to providing unwavering support to Ethiopian athletes, ensuring they have the resources, recognition,and opportunities they need to excel on the global stage.",
+      "To see Ethiopian athletics is globally celebrated, well-developed, and promoted at a world-class level.",
     icon: TelescopeIcon,
   },
   {
@@ -55,17 +61,13 @@ export function FeaturesCards() {
         maxHeight={100}
         showLabel={
           <Flex mt="sm" align="center" justify="flex-end" gap={5}>
-            <Anchor size="xs" >
-              more{" "}
-            </Anchor>
+            <Anchor size="xs">more </Anchor>
             <ArrowDown size={10} />
           </Flex>
         }
         hideLabel={
           <Flex mt="sm" align="center" justify="flex-end" gap={5}>
-            <Anchor size="xs" >
-              less{" "}
-            </Anchor>
+            <Anchor size="xs">less </Anchor>
             <ArrowUp size={10} />
           </Flex>
         }

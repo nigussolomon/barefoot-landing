@@ -78,6 +78,15 @@ export default function Gallery() {
                   </Text>
                 ),
               },
+
+              {
+                value: "eam",
+                label: (
+                  <Text size="xs" px="xl">
+                    ETHIOPIAN ATHLETICS
+                  </Text>
+                ),
+              },
             ]}
           />
         </Flex>

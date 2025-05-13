@@ -1,6 +1,7 @@
 import { Card, Container, SimpleGrid, Image, Title, Text } from "@mantine/core";
 import { LayoutShell } from "../components/layout/shell";
 import { featureStyles } from "../components/ui/featureStyles";
+import Guy from "../assets/guyjpg.jpg";
 
 export default function Teams() {
   return (
@@ -32,7 +33,7 @@ export default function Teams() {
                 Executive Director
               </Title>
               <Title ta="center" order={4}>
-                Ato Wegayehu Girma
+                Athlete Wegayehu Girma
               </Title>
               <Text ta="center">wegayehugirma@barefootethiopia.org</Text>
               <Text ta="center">+251911537173</Text>
@@ -65,13 +66,7 @@ export default function Teams() {
 
           <Card>
             <Card.Section>
-              <Image
-                radius="sm"
-                w="100%"
-                h="45vh"
-                fit="contain"
-                src="https://barefootethiopia.org/uploads/img-1.jpg"
-              />
+              <Image radius="sm" w="100%" h="45vh" fit="contain" src={Guy} />
             </Card.Section>
             <Card.Section mt="sm" inheritPadding>
               <Title ta="center" order={4}>

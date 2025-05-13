@@ -2,8 +2,10 @@ import { TextInput, Container, Tabs, Box, ScrollArea } from "@mantine/core";
 import { LayoutShell } from "../components/layout/shell";
 import { GroupIcon, Megaphone, SearchIcon, Target } from "lucide-react";
 import News from "../components/ui/news";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function NewsPage() {
+  const isMobile = useMediaQuery("(max-width: 480px)");
   return (
     <LayoutShell>
       <Container my="sm" size="xl">
@@ -13,7 +15,12 @@ export default function NewsPage() {
             placeholder="Search for news..."
           />
         </Box>
-        <Tabs mt="xs" variant="pills" orientation="vertical" defaultValue="asp">
+        <Tabs
+          mt="xs"
+          variant="pills"
+          orientation={isMobile ? "horizontal" : "vertical"}
+          defaultValue="asp"
+        >
           <Tabs.List>
             <Tabs.Tab value="asp" leftSection={<Target size={15} />}>
               Athlete Spotlights
@@ -26,7 +33,7 @@ export default function NewsPage() {
             </Tabs.Tab>
           </Tabs.List>
 
-          <ScrollArea h="70vh" type="never">
+          <ScrollArea mt="xs" h="70vh" type="never">
             <Tabs.Panel px="sm" value="asp">
               <News alt />
             </Tabs.Panel>

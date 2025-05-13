@@ -4,6 +4,7 @@ import About from "./pages/about";
 import Gallery from "./pages/gallery";
 import NewsPage from "./pages/news";
 import Teams from "./pages/teams";
+import Membership from "./pages/membrship";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/gallery/*" element={<Gallery />} />
         <Route path="/news/*" element={<NewsPage />} />
         <Route path="/teams/*" element={<Teams />} />
+        <Route path="/membership/*" element={<Membership />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

@@ -9,8 +9,10 @@ import {
   Text,
   Title,
 } from "@mantine/core";
+import { useNavigate } from "react-router-dom";
 
 export default function News({ alt }: { alt?: boolean }) {
+  const navigate = useNavigate();
   const images = ["https://barefootethiopia.org/uploads/blog-01.jpg"];
   const sampleList = alt ? [1, 2, 3, 4, 5, 6, 7, 8, 9] : [1, 2, 3];
   return (
@@ -20,7 +22,9 @@ export default function News({ alt }: { alt?: boolean }) {
           <Title order={2} ta="left" mt="sm">
             Featured News
           </Title>
-          <Anchor size="xs">more</Anchor>
+          <Anchor onClick={() => navigate("/news")} size="xs">
+            more
+          </Anchor>
         </Flex>
       )}
 
@@ -41,9 +45,6 @@ export default function News({ alt }: { alt?: boolean }) {
                 season’s fourth World Athletics Indoor Tour Gold meeting – in
                 Ostrava on Tuesday.
               </Text>
-              <Flex mb="md" justify="flex-end">
-                <Anchor size="xs">Read More</Anchor>
-              </Flex>
             </CardSection>
           </Card>
         ))}

@@ -10,9 +10,11 @@ import {
   Stack,
   Text,
   Box,
+  Modal,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Logo from "../../assets/image.png";
+import LogoAlt from "../../assets/imageAlt.png";
 import {
   ArrowRight,
   DotIcon,
@@ -27,6 +29,7 @@ import { scrollToHash } from "../../utils/scroll";
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
   const [opened, { toggle }] = useDisclosure();
+  const [openedAlt, { toggle: openedAltToggle }] = useDisclosure();
   const navigate = useNavigate();
   const handleNavigation = (path: string) => {
     navigate(path);
@@ -82,18 +85,6 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
       name: "Membership",
       path: "/membership",
       active: path === "/membership",
-      sub: [
-        {
-          name: "Membership Benefits",
-          path: "/membership/benefits",
-          active: path === "/membership/benefits",
-        },
-        {
-          name: "Join Us",
-          path: "/membership/join",
-          active: path === "/membership/join",
-        },
-      ],
     },
   ];
 
@@ -192,7 +183,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                 size="xs"
                 color="primary"
                 variant="filled"
-                onClick={() => handleNavigation("/contact")}
+                onClick={openedAltToggle}
               >
                 <Text size="xs" fw={500}>
                   Contact Us
@@ -200,6 +191,28 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
               </Button>
             </Group>
           </Group>
+          <Modal
+            opened={openedAlt}
+            onClose={openedAltToggle}
+            title={<Text fw="bold">Contact Us</Text>}
+          >
+            <Text size="md" fw="bold">
+              Address
+            </Text>
+            <Text size="sm" c="dimmed">
+              Mana Building, 5th Floor, No. 515 Semit Fiyel Bet, Near Figa Taxi
+              Station Wereda 5, Lemikura Sub-city Addis Ababa, Ethiopia
+            </Text>
+            <Text mt="md" size="md" fw="bold">
+              Phone
+            </Text>
+            <Text size="sm" c="dimmed">
+              +251 911 537 173
+            </Text>
+            <Text size="sm" c="dimmed">
+              +251 911 384 902
+            </Text>
+          </Modal>
         </Container>
       </AppShell.Header>
 
@@ -238,7 +251,13 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                   align="flex-start"
                   justify="space-between"
                 >
-                  <Image radius="md" h={70} w="auto" fit="contain" src={Logo} />
+                  <Image
+                    radius="md"
+                    h={70}
+                    w="auto"
+                    fit="contain"
+                    src={LogoAlt}
+                  />
                   <Text size="xs" c="dimmed">
                     All Rights Reserved. © {new Date().getFullYear()}{" "}
                     BAREFOOT-ETHIOPIA
