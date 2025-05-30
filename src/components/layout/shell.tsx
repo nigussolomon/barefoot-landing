@@ -64,6 +64,12 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
     },
 
     {
+      name: "Our Leadership Team",
+      path: "/teams",
+      active: path === "/teams",
+    },
+
+    {
       name: "Gallery",
       path: "/gallery",
       active: path === "/gallery",
@@ -73,12 +79,6 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
       name: "News",
       path: "/news",
       active: path === "/news",
-    },
-
-    {
-      name: "Our Team",
-      path: "/teams",
-      active: path === "/teams",
     },
 
     {
@@ -92,7 +92,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
     <AppShell
       transitionDuration={500}
       transitionTimingFunction="ease"
-      header={{ height: 60 }}
+      header={{ height: 80 }}
       navbar={{
         width: 300,
         breakpoint: "sm",
@@ -111,7 +111,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                   hiddenFrom="sm"
                   size="sm"
                 />
-                <Image radius="md" h={40} w="auto" fit="contain" src={Logo} />
+                <Image radius="md" h={65} w="auto" fit="contain" src={Logo} />
               </Flex>
               <Group ml="xl" gap={"xs"} visibleFrom="sm">
                 {menu.map((item, index) => (
@@ -203,15 +203,30 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
               Mana Building, 5th Floor, No. 515 Semit Fiyel Bet, Near Figa Taxi
               Station Wereda 5, Lemikura Sub-city Addis Ababa, Ethiopia
             </Text>
-            <Text mt="md" size="md" fw="bold">
-              Phone
-            </Text>
-            <Text size="sm" c="dimmed">
-              +251 911 537 173
-            </Text>
-            <Text size="sm" c="dimmed">
-              +251 911 384 902
-            </Text>
+            <Flex gap="xl">
+              <Box>
+                <Text mt="md" size="md" fw="bold">
+                  Phone
+                </Text>
+                <Text size="sm" c="dimmed">
+                  +251 911 537 173
+                </Text>
+                <Text size="sm" c="dimmed">
+                  +251 911 384 902
+                </Text>
+              </Box>
+              <Box>
+                <Text mt="md" size="md" fw="bold">
+                  Email
+                </Text>
+                <Text size="sm" c="dimmed">
+                  temesgenbekele@barefootethiopia.org
+                </Text>
+                <Text size="sm" c="dimmed">
+                  temeyebekele@gmail.com
+                </Text>
+              </Box>
+            </Flex>
           </Modal>
         </Container>
       </AppShell.Header>

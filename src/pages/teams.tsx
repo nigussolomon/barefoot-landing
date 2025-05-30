@@ -2,6 +2,8 @@ import { Card, Container, SimpleGrid, Image, Title, Text } from "@mantine/core";
 import { LayoutShell } from "../components/layout/shell";
 import { featureStyles } from "../components/ui/featureStyles";
 import Guy from "../assets/guyjpg.jpg";
+import Temesgen from "../assets/temesgen.jpg";
+import Ath from "../assets/athlete.jpg";
 
 export default function Teams() {
   return (
@@ -20,13 +22,7 @@ export default function Teams() {
         <SimpleGrid mb="xl" mt="md" cols={{ base: 1, md: 3 }}>
           <Card>
             <Card.Section>
-              <Image
-                radius="sm"
-                w="100%"
-                h="45vh"
-                fit="contain"
-                src="https://barefootethiopia.org/uploads/img-2.jpg"
-              />
+              <Image radius="sm" w="100%" h="45vh" fit="contain" src={Ath} />
             </Card.Section>
             <Card.Section mt="sm" inheritPadding>
               <Title ta="center" order={4}>
@@ -47,7 +43,7 @@ export default function Teams() {
                 w="100%"
                 h="45vh"
                 fit="contain"
-                src="https://barefootethiopia.org/uploads/img-4.jpg"
+                src={Temesgen}
               />
             </Card.Section>
             <Card.Section mt="sm" inheritPadding>

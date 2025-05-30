@@ -65,7 +65,7 @@ export default function About() {
                 padding={0}
               >
                 <Image
-                  src="https://barefootethiopia.org/uploads/about_04.jpg"
+                  src="https://myhabeshawi.wordpress.com/wp-content/uploads/2021/02/img_20210214_103222_803-1.jpg"
                   width="auto"
                 />
               </Card>
@@ -88,7 +88,7 @@ export default function About() {
                 padding={0}
               >
                 <Image
-                  src="https://barefootethiopia.org/uploads/blog-02.jpg"
+                  src="https://assets.aws.worldathletics.org/large/60def9306356f3b115fd1577.jpg"
                   width="auto"
                 />
               </Card>
@@ -117,7 +117,7 @@ export default function About() {
                   {
                     title: "Government Support",
                     content:
-                      "Our initiatives are proudly supported by both the Ethiopian Athletics Federation and the Ethiopian Ministry of Foreign Affairs. These partnerships not only enhance our credibility but also provide a solid foundation for fostering meaningful collaboration at both national and international levels.",
+                      "Our initiatives are proudly supported by both the Ethiopian Athletics Federation and the Ethiopian Ministry of Sport and Culture. These partnerships not only enhance our credibility but also provide a solid foundation for fostering meaningful collaboration at both national and international levels.",
                   },
                   {
                     title: "Our Mission",
@@ -127,7 +127,7 @@ export default function About() {
                   {
                     title: "Our Vision",
                     content:
-                      "Based in Addis Ababa, our long-term vision is to expand regionally and globally, further elevating Ethiopia’s historic legacy in athletics and establishing the country as a global leader in the sport.",
+                      "To see Ethiopian athletics is globally celebrated, well-developed, and promoted at a world-class level.",
                   },
                 ].map((item) => (
                   <Accordion.Item value={item.title}>

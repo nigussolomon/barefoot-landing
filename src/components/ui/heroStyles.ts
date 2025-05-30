@@ -4,11 +4,11 @@ export const heroStyles = {
     paddingTop: "180px",
     paddingBottom: "130px",
     backgroundImage:
-      "url(https://barefootethiopia.org/uploads/banner-01.jpg)",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundAttachment: "fixed",
-      backgroundRepeat: "no-repeat",
+      "url(https://ethiopiangobgnu.com/siteAdmin/Blog%20images/Visit%20Ethiopia-61eaea85f411a2.29564091.jpg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
 
     "@media (max-width: $mantine-breakpoint-xs)": {
       paddingTop: "80px",

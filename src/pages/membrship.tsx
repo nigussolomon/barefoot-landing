@@ -1,7 +1,23 @@
-import { Card, Container, SimpleGrid, Title, Text, Flex } from "@mantine/core";
+import {
+  Card,
+  Container,
+  SimpleGrid,
+  Title,
+  Text,
+  Flex,
+  Image,
+  Stack,
+  Center,
+} from "@mantine/core";
 import { LayoutShell } from "../components/layout/shell";
 import { featureStyles } from "../components/ui/featureStyles";
 import { Building, HomeIcon, LifeBuoyIcon, Newspaper } from "lucide-react";
+import SAC from "../assets/New Folder/sport and culture.png";
+import MCT from "../assets/New Folder/Ministry_of_Culture_and_Tourism.png";
+import EAF from "../assets/New Folder/Ethiopian-Athletics-Federation.png";
+import EOC from "../assets/New Folder/Ethiopian_Olympic_Committee_logo.png";
+import MFA from "../assets/New Folder/MFA_Ethiopia_Logo.png";
+import IAF from "../assets/New Folder/iaaf-logo-png_seeklogo-307255.png";
 
 export default function Membership() {
   return (
@@ -112,6 +128,24 @@ export default function Membership() {
             </Card>
           ))}
         </SimpleGrid>
+      </Container>
+      <Container mb="xl" size="xl">
+        <Title order={2} ta="center" mt="xl" mb="lg">
+          Our Partners
+        </Title>
+        <Text ta="center" mb="xl" c="dimmed" style={featureStyles.description}>
+          We collaborate with numerous esteemed organizations to further our
+          mission and promote Ethiopian athletics globally
+        </Text>
+        <Center>
+          <SimpleGrid spacing="xl" cols={{ base: 1, md: 3 }}>
+            {[SAC, MCT, EAF, EOC, MFA, IAF].map((val, index) => (
+              <Stack key={index}>
+                <Image src={val} h={200} w={200} />
+              </Stack>
+            ))}
+          </SimpleGrid>
+        </Center>
       </Container>
     </LayoutShell>
   );
